@@ -28,3 +28,8 @@ app.get('/', function (request, response){
 
 // the index name convention base off of the idea that it will work with pakage JSON
 //      https://stackoverflow.com/questions/19850028/what-naming-conventions-exist-for-the-primary-node-js-file
+
+
+// fixing the express install 
+// i think this is the right way to do it to make sure the docker makes image with no errors
+//      https://expressjs.com/en/starter/installing.html

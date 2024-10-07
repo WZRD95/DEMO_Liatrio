@@ -1,0 +1,14 @@
+{
+  "name": "demo_liatrio",
+  "version": "1.0.0",
+  "description": "Here is the code for the various programs from the Exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

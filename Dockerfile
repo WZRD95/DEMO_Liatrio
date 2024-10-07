@@ -1,14 +1,15 @@
 # DEMO Docker file 
 
-From node:10.8
+FROM node:10.8
 
 RUN mkdir -p /home/node/app_DOCKER
 RUN chown -R node:node /home/node/app_DOCKER
 
 WORKDIR /home/node/app_DOCKER
 
-COPY test_3.js .
+COPY index.js .
 COPY node_modules .
+COPY package.json .
 
 USER node
 
@@ -18,4 +19,4 @@ COPY --chown=node:node . .
 
 EXPOSE 80
 
-CMD ["node","test_3.js"]
+CMD ["node","index.js"]

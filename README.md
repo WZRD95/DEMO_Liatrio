@@ -8,4 +8,9 @@ Here is the add for Node.js file using NPM express  (#1)
 Docker file add rought draft  (#2)
 >Added Docker file to get the setup environment for later use
 
+Docker file add fixed to match new file  (#3)
+>Fixed files name to match 
+>PORT open on 80 to match to Docker and index.js
+>Docker image made working on getting rid of errors
+
 
