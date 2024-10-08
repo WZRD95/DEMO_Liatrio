@@ -13,4 +13,7 @@ Docker file add fixed to match new file  (#3)
 >PORT open on 80 to match to Docker and index.js
 >Docker image made working on getting rid of errors
 
-
+Localhost working on Docker  (#4)
+>Was able to update and fix more bugs it looks like every thing is working in
+>docker 
+>Fixed some problems and updated node on my docker 

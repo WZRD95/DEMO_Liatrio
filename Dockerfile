@@ -10,12 +10,11 @@ WORKDIR /home/node/app_DOCKER
 COPY index.js .
 COPY node_modules .
 COPY package.json .
+COPY package-lock.json .
 
 USER node
 
-RUN npm install
-
-COPY --chown=node:node . .
+COPY . .
 
 EXPOSE 80
 

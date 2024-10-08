@@ -33,3 +33,17 @@ app.get('/', function (request, response){
 // fixing the express install 
 // i think this is the right way to do it to make sure the docker makes image with no errors
 //      https://expressjs.com/en/starter/installing.html
+
+// fixing the node errors with docker
+// fix based on this one here in the man pages 
+// i think it was in there missing dependencies 
+// **APPENDED** 
+// Yes, there was a missing JSON minify was not there docker was crashing 
+//      https://www.docker.com/blog/getting-started-with-docker-using-node-jspart-i/
+
+// possable help in the future 
+//      https://blog.valsa.solutions/container-maintenance-with-docker-compose-handling-crashes-in-nodejs-environments
+
+// fixing error with the wrong version in the packages 
+// this was an error from docker
+//      https://stackoverflow.com/questions/16827858/error-npm-warn-package-json-no-repository-field
