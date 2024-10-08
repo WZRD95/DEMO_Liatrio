@@ -12,6 +12,6 @@ jobs:
     - name: checkout 
       uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . -t wzrd95/DEMO_Liatrio:latest
+      run: docker build . -t wzrd95/demo_liatrio:latest
     - name: publish
-      run: docker push wzrd95/DEMO_Liatrio:latest
+      run: docker push wzrd95/demo_liatrio:latest
