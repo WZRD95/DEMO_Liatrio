@@ -1,7 +1,6 @@
 name: Docker Image CI
 
-on:
-  [workflow-dispatch]
+on: workflow_dispatch
 
 jobs:
 
@@ -11,8 +10,8 @@ jobs:
 
     steps:
     - name: checkout 
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . -t WZRD95/DEMO_Liatrio:latest
     - name: publish
-      docker push WZRD95/DEMO_Liatrio:latest
+      run: docker push WZRD95/DEMO_Liatrio:latest
