@@ -20,3 +20,6 @@ Localhost working on Docker  (#4)
 
 Working on GIT hub actions  (#5)
 >Made a GIT action file to run the action on GIT 
+
+Fixed error in Actions code   (#6)
+>Trying to get actions working they wont show up yet befor i try from the online repo 
