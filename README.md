@@ -17,3 +17,6 @@ Localhost working on Docker  (#4)
 >Was able to update and fix more bugs it looks like every thing is working in
 >docker 
 >Fixed some problems and updated node on my docker 
+
+Working on GIT hub actions  (#5)
+>Made a GIT action file to run the action on GIT 
