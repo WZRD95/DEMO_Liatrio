@@ -12,10 +12,6 @@ app.get('/', function(request , response){
 
     
     response.send(minified_Json);
-
-    //response;
-
-    //response.send(minified_Json);
 })
 
 /*** tests didnt like this ***  
