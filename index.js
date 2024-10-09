@@ -14,6 +14,21 @@ app.get('/', function (request, response){
     const my_Json = { "message": "My name is Joel", "timestamp": time_out }
     const minified_Json = jsonminify(JSON.stringify(my_Json));
 
+    response.send(minified_Json);
+})
+
+/* tests didnt like this  
+
+app.listen(PORT, () => {
+    console.log(`\n  Run time start => ${get_date}\n`);
+    console.log(`  Server running on port ${PORT}\n`);
+});
+
+app.get('/', function (request, response){
+    var time_out = new Date().getTime();
+    const my_Json = { "message": "My name is Joel", "timestamp": time_out }
+    const minified_Json = jsonminify(JSON.stringify(my_Json));
+
     if(request)  
     { 
         console.log("New Request..."); 
@@ -22,6 +37,9 @@ app.get('/', function (request, response){
 
     response.send(minified_Json);
 })
+
+***************************************************************************/
+
 
 // minify bases off this 
 //      https://www.npmjs.com/package/jsonminify
