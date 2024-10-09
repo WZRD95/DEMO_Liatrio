@@ -7,6 +7,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    services:
+      ports: 8080:80
 
     steps:
     - name: checkout 
@@ -23,8 +25,8 @@ jobs:
       run: docker run -p 80:80 -d --name demo-disk my-image
     - name: See if its running 
       run: docker ps 
-    - name: ping
-      run: ping localhost
+    - name: ping 
+      run: ping -c 5 localhost:80
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
 
