@@ -10,8 +10,10 @@ app.get('/', function (request, response){
     const my_Json = { "message": "My name is Joel", "timestamp": time_out }
     const minified_Json = jsonminify(JSON.stringify(my_Json));
 
-    //response.setHeader('Content-Type', 'application/json');
-    response.json(minified_Json);
+    response.type('json');
+    response.send(minified_Json);
+
+    return response;
 
     //response.send(minified_Json);
 })
