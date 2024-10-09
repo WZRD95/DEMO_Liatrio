@@ -11,7 +11,14 @@ jobs:
     steps:
     - name: checkout 
       uses: actions/checkout@v4
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
     - name: Build the Docker image
       run: docker build . -t wzrd95/demo_liatrio:latest
     - name: publish
       run: docker push wzrd95/demo_liatrio:latest
+
+# Add support for more platforms with QEMU (optional)
+# https://github.com/docker/setup-qemu-action
