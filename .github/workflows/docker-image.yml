@@ -24,7 +24,7 @@ jobs:
     - name: See if its running 
       run: docker ps 
     - name: ping 
-      run: ping -c 5 localhost:80
+      run: ping -c 5 localhost:8080
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
 
