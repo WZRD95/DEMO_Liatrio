@@ -1,3 +1,6 @@
+# out line code for the run this file is not being used
+# i eneded up using GIT from the web browser 
+
 name: Docker Image CI
 
 on: workflow_dispatch
@@ -5,7 +8,6 @@ on: workflow_dispatch
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -15,3 +17,4 @@ jobs:
       run: docker build . -t WZRD95/DEMO_Liatrio:latest
     - name: publish
       run: docker push WZRD95/DEMO_Liatrio:latest
+

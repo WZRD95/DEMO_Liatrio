@@ -10,7 +10,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/', function (request, response){
-    var time_out = new Date().toLocaleString();
+    var time_out = new Date();
     const my_Json = { "message": "My name is Joel", "timestamp": time_out }
     const minified_Json = jsonminify(JSON.stringify(my_Json));
 
@@ -47,3 +47,12 @@ app.get('/', function (request, response){
 // fixing error with the wrong version in the packages 
 // this was an error from docker
 //      https://stackoverflow.com/questions/16827858/error-npm-warn-package-json-no-repository-field
+
+// got the work flow dispactch to work with button for testing 
+// i did end up using the web git to make the action file to run 
+//      https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch
+
+// good outline for secrets
+// here is the one i looked at and easy to fallow 
+// i did see a video about this as well so this just helps confirms it works 
+//      https://stackoverflow.com/questions/77815378/cant-push-image-to-docker-hub-via-github-actions-using-token

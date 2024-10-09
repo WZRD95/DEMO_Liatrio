@@ -23,3 +23,6 @@ Working on GIT hub actions  (#5)
 
 Fixed error in Actions code   (#6)
 >Trying to get actions working they wont show up yet befor i try from the online repo 
+
+Fixing time  (#7)
+>Passing 4 tests as of this point 
