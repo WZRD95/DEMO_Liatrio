@@ -7,13 +7,13 @@ app.listen(PORT);
 
 app.get('/', function (request, response){
     var time_out = new Date().getTime();
-    const my_Json = { "message": "My name is Joel", "timestamp": time_out }
+    const my_Json = { message: 'My name is Joel', timestamp: time_out }
     const minified_Json = jsonminify(JSON.stringify(my_Json));
 
     response.type('json');
     response.send(minified_Json);
 
-    return response;
+    response;
 
     //response.send(minified_Json);
 })
