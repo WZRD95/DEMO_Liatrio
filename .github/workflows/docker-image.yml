@@ -16,9 +16,11 @@ jobs:
     #- name: Build the Docker image
     #  run: docker build . --file Dockerfile --tag my-image-test:$(date +%s)
     - name: Build the Docker image
-      run: docker build . -t demo_liatrio/dockerfile:latest
+      run: docker build -t my-image .
     #- name: publish
     #  run: docker push demo_liatrio/dockerfile:latest
+    - name: Run Docker container
+      run: docker run -p 80:80 -d --name demo-disk my-image
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
 
