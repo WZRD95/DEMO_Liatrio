@@ -4,10 +4,7 @@ const jsonminify = require('jsonminify')
 const get_date = new Date().toLocaleString()
 const PORT = process.env.PORT || 80;
 
-app.listen(PORT, () => {
-    console.log(`\n  Run time start => ${get_date}\n`);
-    console.log(`  Server running on port ${PORT}\n`);
-});
+app.listen(PORT, () => { console.log(`\n  Run time start => ${get_date}\n`); });
 
 app.get('/', function (request, response){
     var time_out = new Date().getTime();
