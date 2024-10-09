@@ -1,0 +1,9 @@
+name: Apprenticeship Interview Exercise
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: run tests
+      uses: liatrio/github-actions/apprentice-action@master
