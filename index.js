@@ -11,7 +11,7 @@ app.get('/', function(request , response){
     const minified_Json = jsonminify(JSON.stringify(my_Json));
 
     
-    response.json(minified_Json);
+    response.send(minified_Json);
 
     //response;
 
