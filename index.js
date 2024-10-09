@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 80;
 
 app.listen(PORT);
 
-app.get('/', response => {
+app.get('/', (request , response) => {
     var time_out = new Date().getTime();
     const my_Json = { message: 'My name is Joel', timestamp: time_out }
     const minified_Json = jsonminify(JSON.stringify(my_Json));
