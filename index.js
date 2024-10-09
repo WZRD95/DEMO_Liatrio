@@ -1,17 +1,19 @@
 const express = require('express')
 const app = express()
 const jsonminify = require('jsonminify')
-const get_date = new Date().toLocaleString()
 const PORT = process.env.PORT || 80;
 
-app.listen(PORT, () => { console.log(`\n  Run time start => ${get_date}\n`); });
+app.listen(PORT);
 
 app.get('/', function (request, response){
     var time_out = new Date().getTime();
     const my_Json = { "message": "My name is Joel", "timestamp": time_out }
     const minified_Json = jsonminify(JSON.stringify(my_Json));
 
-    response.send(minified_Json);
+    response.setHeader('Content-Type', 'application/json');
+    response.end(JSON.stringify(minified_Json));
+
+    //response.send(minified_Json);
 })
 
 /* tests didnt like this  
