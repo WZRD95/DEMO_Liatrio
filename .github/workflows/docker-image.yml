@@ -23,6 +23,8 @@ jobs:
       run: docker run -p 80:80 -d --name demo-disk my-image
     - name: See if its running 
       run: docker ps 
+    - name: ping
+      run: ping localhost
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
 
