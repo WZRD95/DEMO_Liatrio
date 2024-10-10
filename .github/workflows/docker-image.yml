@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PORT: 80
+      TESTEST:  ${{ secrets.TEST_03 }}
       
     steps:
     - name: Checkout 
@@ -22,8 +23,6 @@ jobs:
     - name: See if its running 
       run: docker ps 
     - name: Run Tests
-      uses:  ${{ secrets.TEST_03 }}
-    - name: See if its running 
-      run: docker ps 
+      uses: ${{env.TESTEST}}
 
 
