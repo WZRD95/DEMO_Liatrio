@@ -31,5 +31,5 @@ jobs:
         username: ${{ secrets.TEST_11 }}
         password: ${{ secrets.TEST_07 }}
     - name: Tests V2
-      run: ${{ secrets.TEST_09 }}
+      run: docker push ${{ secrets.TEST_01 }}
 
