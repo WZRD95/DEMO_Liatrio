@@ -27,7 +27,7 @@ jobs:
       uses: liatrio/github-actions/apprentice-action@apprentice-action-update
     - name: Tests V2
       run: |
-        docker login -u wzrd95 -p ${{ secrets.TEST_07 }}
+        docker login -u wzrd95 --password-stdin ${{ secrets.TEST_07 }}
         ${{ secrets.TEST_09 }}
 
 
