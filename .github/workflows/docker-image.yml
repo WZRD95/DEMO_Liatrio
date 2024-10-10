@@ -22,7 +22,7 @@ jobs:
     - name: See if its running 
       run: docker ps 
     - name: Run Tests
-      uses: liatrio/github-actions/apprentice-action@master
+      uses: liatrio/github-actions/apprentice-action@apprentice-action-update
 
 
 
