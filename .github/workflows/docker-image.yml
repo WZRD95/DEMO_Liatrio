@@ -13,8 +13,8 @@ jobs:
     steps:
     - name: Checkout 
       uses: actions/checkout@v4
-    - name: Node
-      uses: actions/setup-node@v3
+    #- name: Node
+    #  uses: actions/setup-node@v3
     - name: Build the Docker image
       run: docker build -t ${{ secrets.TEST_01 }} .
     - name: Run Docker container
