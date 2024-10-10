@@ -22,9 +22,7 @@ jobs:
     - name: See if its running 
       run: docker ps 
     - name: Run Tests
-      env:
-        THISONE:  ${{ secrets.TEST_03 }}
-      uses: ${{env.THISONE}}
+      uses: ${{ secrets.TEST_03 }}
 
 
 
