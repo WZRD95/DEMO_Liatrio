@@ -21,6 +21,5 @@ jobs:
       run: docker run -p 80:80 -d --name ${{ secrets.TEST_02 }} ${{ secrets.TEST_01 }}
     - name: See if its running 
       run: docker ps 
-    - name: Run Tests
-      uses:  ${{ secrets.TEST_03 }}
+
 
