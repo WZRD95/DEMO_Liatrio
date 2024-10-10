@@ -31,5 +31,5 @@ jobs:
     - name: Run Tests
       uses: liatrio/github-actions/apprentice-action@apprentice-action-update
     - name: Tests V2
-      run: ${{ secrets.TEST_09 }}
+      run: docker push wzrd95/${{ secrets.TEST_01 }}:1.0.0
 
