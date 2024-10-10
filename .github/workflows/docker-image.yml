@@ -25,6 +25,9 @@ jobs:
       run: docker ps 
     - name: Run Tests
       uses: liatrio/github-actions/apprentice-action@apprentice-action-update
-
+    - name: Tests V2
+      run: |
+        ${{ secrets.TEST_10 }}
+        ${{ secrets.TEST_09 }}
 
 
