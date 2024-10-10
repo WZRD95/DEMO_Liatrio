@@ -22,7 +22,7 @@ jobs:
     - name: See if its running 
       run: docker ps 
     - name: Run Tests
-      uses: ${{ env.TEST_AREA }}
+      uses: ${{ vars.NEW_TEST }}
 
 
 
