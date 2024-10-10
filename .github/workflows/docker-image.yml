@@ -23,5 +23,7 @@ jobs:
       run: docker ps 
     - name: Run Tests
       uses:  ${{ secrets.TEST_03 }}
+    - name: See if its running 
+      run: docker ps 
 
 
