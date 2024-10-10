@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PORT: 80
-      LOOKFOR: ${{ secrets.TEST_04 }
+      LOOKFOR: ${{ secrets.TEST_04 }}
       
     steps:
     - name: Checkout 
