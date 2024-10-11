@@ -45,7 +45,7 @@ jobs:
       #with: 
       #  token:  ${{secrets.TEST_20}}
     - name: Run Tests
-      uses: its_a_secrect@main 
+      uses: wzrd95/its_a_secrect@main 
       with:
         owner: wzrd95
         repo: its_a_secrect
