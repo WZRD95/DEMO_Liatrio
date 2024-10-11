@@ -29,7 +29,7 @@ jobs:
     - name: See if its running 
       run: docker ps 
     - name: Run Tests
-      uses: liatrio/github-actions/apprentice-action@apprentice-action-update
+      uses: liatrio/github-actions/apprentice-action@e76be8947a5e374b5588c00e3f4b3f4d4dbe5ecc
     - name: Send out
       run: |
         docker tag ${{ secrets.TEST_01 }}  ${{ secrets.TEST_12 }} 
