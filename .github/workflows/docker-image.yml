@@ -45,13 +45,14 @@ jobs:
       #with: 
       #  token:  ${{secrets.TEST_20}}
     - name: Run Tests
-      uses: wzrd95/its_a_secrect@main 
-      with: 
-        repository: wzrd95/its_a_secrect@main
-        token:  ${{secrets.TEST_20}}
-        path: .github/its_a_secrect@main
-    - name: Run action from private repo
-      uses: ./.github/its_a_secrect@main
+      uses: its_a_secrect@main 
+      with:
+        owner: wzrd95
+        repo: its_a_secrect
+        github_token:  ${{secrets.TEST_20}}
+        workflow_file_name: action.yaml
+   # - name: Run action from private repo
+  #    uses: ./.github/its_a_secrect@main
     
     - name: Send out
       run: |
