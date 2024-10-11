@@ -33,8 +33,7 @@ jobs:
     - name: Run Tests
       uses: actions/checkout@v4
       with: 
-        repository: wzrd95/its_a_secrect
-        ref: main
+        repository: wzrd95/its_a_secrect@main
         token:  ${{secrets.TEST_20}}
         path: ./.github/actions/its_a_secrect
     - name: Run action from private repo
