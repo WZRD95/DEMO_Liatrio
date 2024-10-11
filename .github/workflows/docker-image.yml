@@ -40,10 +40,18 @@ jobs:
     #  uses: ./.github/actions/its_a_secrect
     #- name: new try 
      # uses: wzrd95/its_a_secrect/action.yaml@4a9afff58468bc089923a31e0c0527e52a4ac6d0
-    - name: Run action from private repo
+    #- name: Run action from private repo
+     # uses: wzrd95/its_a_secrect@main 
+      #with: 
+      #  token:  ${{secrets.TEST_20}}
+    - name: Run Tests
       uses: wzrd95/its_a_secrect@main 
       with: 
+        repository: wzrd95/its_a_secrect@main
         token:  ${{secrets.TEST_20}}
+        path: .github/its_a_secrect@main
+    - name: Run action from private repo
+      uses: ./.github/its_a_secrect@main
     
     - name: Send out
       run: |
