@@ -45,11 +45,11 @@ jobs:
       #with: 
       #  token:  ${{secrets.TEST_20}}
     - name: Run Tests
-      uses: wzrd95/its_a_secrect/action.yaml@4a9afff58468bc089923a31e0c0527e52a4ac6d0
-      with:
-        owner: wzrd95
-        github_token:  ${{secrets.TEST_20}}
-        workflow_file_name: action.yaml
+      uses: wzrd95/its_a_secrect@4a9afff58468bc089923a31e0c0527e52a4ac6d0
+     # with:
+      #  owner: wzrd95
+    #    github_token:  ${{secrets.TEST_20}}
+      #  workflow_file_name: action.yaml
    # - name: Run action from private repo
   #    uses: ./.github/its_a_secrect@main
     
