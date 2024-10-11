@@ -39,7 +39,7 @@ jobs:
   #  - name: Run action from private repo
 #      uses: ./.github/its_a_secrect@main
     - name: new try 
-      run: wzrd95/its_a_secrect@main
+      uses: wzrd95/its_a_secrect@main
     
     - name: Send out
       run: |
