@@ -31,7 +31,13 @@ jobs:
     #- name: Run Tests
     #  uses: liatrio/github-actions/apprentice-action@e76be8947a5e374b5588c00e3f4b3f4d4dbe5ecc
     - name: Run Tests
-      uses: wzrd95/its_a_secrect@main 
+      uses: actions/checkout@v4
+      with: 
+        repository: wzrd95/its_a_secrect@main
+        token:  ${{secrets.MY_TOKEN}}
+        path: .github/its_a_secrect@main
+    - name: Run action from private repo
+      uses: ./.github/its_a_secrect@main
     
     - name: Send out
       run: |
