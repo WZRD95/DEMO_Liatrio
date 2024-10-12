@@ -37,6 +37,9 @@ jobs:
         run: docker ps
       - name: art
         uses: actions/upload-artifact@v4
+        with:
+          name: test-art
+          path: dist
 
   TestCodeMyRepo:
     name: Code test sent to my REPO
@@ -47,13 +50,14 @@ jobs:
     steps:
       - name: art
         uses: actions/download-artifact@v4
+        with:
+          name: test-art
+          path: dist
       - name: See if its running 
         run: docker ps
       - name: Run Tests
         uses: wzrd95/its_a_secrect@8ca9cf144862c2d677be09eed069587c6984474c
-        with:
-          name: test-art
-          path: dist
+
 
   TestCodeLiatrio:
     name: Code test sent to Liatrio
