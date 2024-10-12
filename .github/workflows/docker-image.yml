@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-art
-          path: dist
+          path: frontend/build
 
   TestCodeMyRepo:
     name: Code test sent to my REPO
@@ -52,7 +52,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: test-art
-          path: dist
+          path: frontend/build
       - name: See if its running 
         run: docker ps
       - name: Run Tests
@@ -70,7 +70,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: test-art
-          path: dist
+          path: frontend/build
       - name: See if its running 
         run: docker ps
       - name: Run Tests
