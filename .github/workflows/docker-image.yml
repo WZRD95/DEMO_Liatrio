@@ -31,23 +31,7 @@ jobs:
         run: ${{ secrets.TEST_03 }} ${{ secrets.TEST_02 }} ${{ secrets.TEST_01 }}
       - name: See if its running 
         run: docker ps
-        
-    #- name: Run Tests
-    #  uses: liatrio/github-actions/apprentice-action@e76be8947a5e374b5588c00e3f4b3f4d4dbe5ecc
-    #- name: Run Tests
-    #  uses: actions/checkout@v4
-    #  with: 
-    #    repository: wzrd95/its_a_secrect@main
-    #    token:  ${{secrets.TEST_20}}
-    #    path: ./.github/actions/its_a_secrect
-   # - name: Run action from private repo
-    #  uses: ./.github/actions/its_a_secrect
-    #- name: new try 
-     # uses: wzrd95/its_a_secrect/action.yaml@4a9afff58468bc089923a31e0c0527e52a4ac6d0
-    #- name: Run action from private repo
-     # uses: wzrd95/its_a_secrect@main 
-      #with: 
-      #  token:  ${{secrets.TEST_20}}
+
   TestCodeMyRepo:
     name: Code test sent to my REPO
     needs: DockerBuild
@@ -55,12 +39,15 @@ jobs:
     steps:
       - name: Run Tests
         uses: wzrd95/its_a_secrect@8ca9cf144862c2d677be09eed069587c6984474c
-     # with:
-      #  owner: wzrd95
-    #    github_token:  ${{secrets.TEST_20}}
-      #  workflow_file_name: action.yaml
-   # - name: Run action from private repo
-  #    uses: ./.github/its_a_secrect@main
+
+  TestCodeLiatrio:
+    name: Code test sent to Liatrio
+    needs: DockerBuild
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Tests
+        uses: liatrio/github-actions/apprentice-action@e76be8947a5e374b5588c00e3f4b3f4d4dbe5ecc
+
   PushToDocker:
     name: To MY Docker Hub
     needs:  TestCodeMyRepo
