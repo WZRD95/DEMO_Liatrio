@@ -45,7 +45,7 @@ jobs:
       #with: 
       #  token:  ${{secrets.TEST_20}}
     - name: Run Tests
-      uses: wzrd95/its_a_secrect@4a9afff58468bc089923a31e0c0527e52a4ac6d0
+      uses: wzrd95/its_a_secrect@8ca9cf144862c2d677be09eed069587c6984474c
      # with:
       #  owner: wzrd95
     #    github_token:  ${{secrets.TEST_20}}
