@@ -17,7 +17,7 @@ jobs:
       
   DockerBuild:
     name: To Docker 
-    needs: [Build]
+    needs: Build
     runs-on: ubuntu-latest
     steps:
       - name: Build the Docker image
@@ -50,7 +50,7 @@ jobs:
       #  token:  ${{secrets.TEST_20}}
   TestCodeMyRepo:
     name: Code test sent to my REPO
-    needs: [Build]
+    needs: DockerBuild
     runs-on: ubuntu-latest
     steps:
       - name: Run Tests
@@ -63,7 +63,7 @@ jobs:
   #    uses: ./.github/its_a_secrect@main
   PushToDocker:
     name: To MY Docker Hub
-    needs: [Build]
+    needs:  TestCodeMyRepo
     runs-on: ubuntu-latest
     steps:
       - name: Send out
