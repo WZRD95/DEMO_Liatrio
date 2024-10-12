@@ -7,7 +7,6 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     env:
-      PORT: 80
       LOOKF: ${{ secrets.TEST_04 }}
       LOOKFO: ${{ secrets.TEST_05 }}
       LOOKFOR: ${{ secrets.TEST_06 }}
@@ -17,6 +16,8 @@ jobs:
       
   DockerBuild:
     name: To Docker 
+    env:
+      PORT: 80
     needs: Build
     runs-on: ubuntu-latest
     steps:
@@ -36,6 +37,8 @@ jobs:
 
   TestCodeMyRepo:
     name: Code test sent to my REPO
+    env:
+      PORT: 80
     needs: DockerBuild
     runs-on: ubuntu-latest
     steps:
@@ -44,6 +47,8 @@ jobs:
 
   TestCodeLiatrio:
     name: Code test sent to Liatrio
+    env:
+      PORT: 80
     needs: DockerBuild
     runs-on: ubuntu-latest
     steps:
