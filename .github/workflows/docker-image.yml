@@ -35,6 +35,8 @@ jobs:
         run: ${{ secrets.TEST_03 }} ${{ secrets.TEST_02 }} ${{ secrets.TEST_01 }}
       - name: See if its running 
         run: docker ps
+      - name: art
+        uses: actions/upload-artifact@v4
 
   TestCodeMyRepo:
     name: Code test sent to my REPO
@@ -43,10 +45,15 @@ jobs:
     needs: DockerBuild
     runs-on: ubuntu-latest
     steps:
+      - name: art
+        uses: actions/download-artifact@v4
       - name: See if its running 
         run: docker ps
       - name: Run Tests
         uses: wzrd95/its_a_secrect@8ca9cf144862c2d677be09eed069587c6984474c
+        with:
+          name: test-art
+          path: dist
 
   TestCodeLiatrio:
     name: Code test sent to Liatrio
@@ -55,6 +62,11 @@ jobs:
     needs: DockerBuild
     runs-on: ubuntu-latest
     steps:
+      - name: art
+        uses: actions/download-artifact@v4
+        with:
+          name: test-art
+          path: dist
       - name: See if its running 
         run: docker ps
       - name: Run Tests
