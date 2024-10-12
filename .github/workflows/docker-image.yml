@@ -45,8 +45,8 @@ jobs:
       - name: Run Tests
         uses: wzrd95/its_a_secrect@8ca9cf144862c2d677be09eed069587c6984474c
 
-  TestCodeLiatrio:
-    name: Code test with Liatrio @ OLD
+  TestCodeOld:
+    name: Test Liatrio @ OLD
     env:
       PORT: 80
     needs: DockerBuild
@@ -63,10 +63,8 @@ jobs:
       - name: Run Tests
         uses: liatrio/github-actions/apprentice-action@e76be8947a5e374b5588c00e3f4b3f4d4dbe5ecc
 
-  TestCodeLiatrio2:
-    name: Code test with Liatrio @ MAIN
-    env:
-      PORT: 80
+  TestCodeMain:
+    name: Test Liatrio @ MAIN
     needs: DockerBuild
     runs-on: ubuntu-latest
     steps:
