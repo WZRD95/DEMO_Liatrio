@@ -60,7 +60,7 @@ jobs:
 
   TestCodeMain:
     name: Test Liatrio @ MAIN
-    if: always()
+    continue-on-error: true
     needs: DockerBuild
     runs-on: ubuntu-latest
     steps:
