@@ -98,7 +98,7 @@ jobs:
 
   PushToGoogle:
     name: Google Push -->
-    needs: TestCodeMyRepo
+    needs: PushToDocker
     runs-on: ubuntu-latest
     steps:
       - name: Set up envorment 
