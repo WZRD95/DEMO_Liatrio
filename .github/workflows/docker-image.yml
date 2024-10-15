@@ -116,5 +116,10 @@ jobs:
           credentials_json: '${{ secrets.TEST_29 }}'
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
-        
+      - name: Tag file
+        run: docker tag ${{ secrets.TEST_12 }} ${{ secrets.TEST_24 }}
+      - name: Setup
+        run: gcloud auth configure-docker ${{ secrets.TEST_32 }}
+      - name: Last Push 
+        run: docker push ${{ secrets.TEST_99 }}
 
