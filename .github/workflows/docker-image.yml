@@ -109,7 +109,7 @@ jobs:
           username: ${{ secrets.TEST_11 }}
           password: ${{ secrets.TEST_07 }}
       - name: Pull from Docker
-        run: docker pull ${{ secrets.TEST_12 }}:latest
+        run: docker pull ${{ secrets.TEST_12 }}
       - name: Run Docker container
         run: ${{ secrets.TEST_03 }} ${{ secrets.TEST_02 }} ${{ secrets.TEST_01 }}
       - name: See if its running 
