@@ -110,8 +110,11 @@ jobs:
           password: ${{ secrets.TEST_07 }}
       - name: Pull from Docker
         run: docker pull ${{ secrets.TEST_12 }}
-      - name: Run Docker container
-        run: ${{ secrets.TEST_03 }} ${{ secrets.TEST_02 }} ${{ secrets.TEST_01 }}
-      - name: See if its running 
-        run: docker ps
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.TEST_29 }}'
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+        
 
