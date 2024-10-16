@@ -26,3 +26,6 @@ Fixed error in Actions code   (#6)
 
 Fixing time  (#7)
 >Passing 4 tests as of this point 
+
+Woring on actions  (#8)
+>They are working at this time and can push on there own
